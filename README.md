@@ -1,2 +1,5 @@
 # waterphp-todo
-A TODO application with WaterPHP + AngularJS + Materialize CSS
+Uma aplicação CRUD para cadastrar tarefas, usando WaterPHP + AngularJS + Materialize CSS.
+
+## Instalação
+Veja o arquivo install.txt antes de começar, é muito simples! =)

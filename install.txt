@@ -1,0 +1,50 @@
+============================================================================================
+ATENÇÃO: PARA USAR A APLICAÇÃO DE EXEMPLO COM O FRAMEWORK VOCÊ DEVE SEGUIR OS PASSOS ABAIXO:
+============================================================================================
+
+=========================================
+PASSO 1: PERMISSÃO PARA ARMAZENAR SESSÕES
+=========================================
+
+De permissão total para o diretório "storage/sessions" localizado dentro da pasta
+onde criou seu projeto, senão uma mensagem de erro será exibida em seu navegador
+ao tentar acessar a aplicação.
+
+Exemplo em Linux:
+-----------------
+
+$ sudo chmod 777 -R storage/
+
+OBS: Se estiver usando o Microsoft Windows, talvez não seja necessário executar
+este passo, isto depende da configuração do SO utilizado.
+
+=================================
+PASSO 2: CRIANDO O BANCO DE DADOS
+=================================
+
+Para usar a aplicação de exemplo "TODO", é necessário criar o banco de dados
+e a tabela conforme segue abaixo:
+
+Exemplo usando MYSQL:
+---------------------
+
+CREATE DATABASE waterphp_todo;
+
+USE waterphp_todo;
+
+CREATE TABLE IF NOT EXISTS `todos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) NOT NULL,
+  `description` text NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=64;
+
+=================================
+PASSO 3: CONFIGURANDO A APLICAÇÃO
+=================================
+
+Abra o arquivo "app/config/config.php" e siga as orientações, é muito simples!
+Obs: Lembre-se de trocar o usuário e a senha para acessar o banco, conforme
+configurado em seu MySQL, ou outro banco de sua preferência.

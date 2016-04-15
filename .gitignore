@@ -1,0 +1,4 @@
+.idea
+water/core/database/tests
+water/core/error/tests
+water/core/utils/tests
